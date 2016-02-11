@@ -59,6 +59,10 @@ body {
   font-size: 16px;
 }
 
+a {
+	text-decoration: none;
+}
+
 h1, h2, h3 {
 	font-family: 'Chunkfive';
 }
@@ -147,17 +151,16 @@ div.content {
 section.about {
 	display: flex;
 	align-items: center;
-	min-height: 100vh;
-	width: 100%;
+	/*min-height: 100vh;*/
+	/*width: 100%;*/
 	background-color: #bbd164;
 	flex-wrap: wrap;
-	/*position: relative;*/
 }
 
 section.about .about-content {
 	width: 70%;
 	margin: 0 auto;
-	padding: 0 3em;
+	padding: 5em 3em;
 	order: 1;
 	align-items: center;
 }
@@ -170,7 +173,7 @@ section.about img {
 section.about p {
 	font-size: 3em;
 	padding: 5em 3em;
-	padding-bottom: 3em;
+	padding-bottom: 1em;
 	padding-right: 0em;
 	color: #404041;
 	display: inline-block;
@@ -206,15 +209,19 @@ section.about .fa-arrow .fa {
 	margin: 0 auto;
 }
 
-.countdown img {
+.slide-wrapper img {
 	width: 100%;
 	height: auto;
 	padding-top: 10em;
 }
 
-.countdown h2 {
+.slide-wrapper img.crime-img {
+	padding-top: 5em;
+}
+
+.slide-wrapper a h2 {
 	text-align: center;
-	font-size: 5em;
+	font-size: 4em;
 	color: #DBDBDB;
 	width: 100%;
 	border: 5px solid #fff;
@@ -240,14 +247,24 @@ section.about .fa-arrow .fa {
 	color: #DBDBDB;
 }
 
+.slide-wrapper .red-text {
+	color: #CC0000;
+}
+
 .slide-wrapper p {
-	font-size: 1.5em;
-	line-height: 1.5em;
-	font-weight: bold;
+	font-size: 1.25em;
+	line-height: 1.25em;
+	columns: 2 200px;
+	-webkit-columns: 2 200px;
+	-moz-columns: 2 200px;
 }
 
 .crimerate {
-	background-color: red;
+	background-color:#3D3D3D;
+}
+
+.crimerate .slide-wrapper p {
+	color: #DBDBDB;
 }
 
 .contact {
@@ -266,4 +283,41 @@ section.about .fa-arrow .fa {
 	font-weight: bold;
 	font-size: 1.5em;
 	color: #61bbe1;
+}
+
+
+@media only screen and (max-width: 1607px) and (min-width: 1300px) {
+
+	header nav ul li a {
+		font-size: 4em;
+	}
+
+	section.about p {
+		font-size: 2.5em;
+		padding: 3em 2em;
+		padding-bottom: 1em;
+		padding-right: 0em;
+		width: 55%;
+	}
+
+	section.about img {
+		padding-left: 3em;
+	}
+
+	section.about .about-content {
+		padding: 3em 3em;
+	}
+
+	.slide-wrapper a h2 {
+		font-size: 3em;
+	}
+
+	.slide-wrapper p {
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	.fa {
+		font-size: 2em;
+	}
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
   <title>Matt About Web Dev</title>
   <link rel="shortcut icon" href="http://www.mattaboutwebdev.com/favicon.ico" />
   <!--
@@ -35,11 +36,11 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
   <script src="FullPage.js\jquery.fullPage.js"></script>
   <script src="FullPage.js\examples.js"></script>
-  <link rel="stylesheet" href="FullPage.js\jquery.FullPage.css">
   <link rel="stylesheet" href="assets\font-awesome-4.5.0\css\font-awesome.min.css">
   <link rel="stylesheet" href="assets\MyFontsWebfontsKit.css">
   <link rel="stylesheet" href="style.css">
 <script src="prefixfree.min.js"></script>
+  <link rel="stylesheet" href="FullPage.js\jquery.fullPage.css">
 <link rel="shortcut icon" href="favicon.ico">
   <script>
     $(document).ready(function() {
@@ -61,7 +62,14 @@
         <img src="assets\mawd-logo-01-01.png" alt="Matt About Web Dev Logo">
         <div class="deep-yellow"></div>
       </div>
-      <nav>
+      <!-- <nav class="mobile-menu">
+        <ul id="menu">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav> -->
+      <nav class="desktop-menu">
         <ul id="menu">
           <li data-menuanchor="aboutPage"><a href="#aboutPage">ABOUT</a></li>
           <li data-menuanchor="workPage"><a href="#workPage">WORK</a></li>
@@ -77,11 +85,13 @@
 
           <p>Hi, I'm Matthew Dykeman. A web developer with a marketing background based in Toronto, Ontario. I have a passion for creating clean, easy-to-use web sites and web applications. I particularly enjoy User-Experience driven development. My ultimate goal is to make the web easier to use for everyone!</p>
 
+          <a href="#workPage">
+            <figure>
+              <figcaption>check out my work</figcaption>
+              <i class="fa fa-chevron-down"></i>
+            </figure>
+          </a>
         </div>
-        <figure>
-          <figcaption>check out my work</figcaption>
-          <i class="fa fa-chevron-down"></i>
-        </figure>
 
       </section>
       <section class="section work" id="section1">
@@ -89,14 +99,25 @@
             <div class="slide-wrapper">
             <img src="assets\ProjectCountdown.png" alt="Image of Project countdown on an Computer, Tablet and Mobile device">
             <a href="http://mattaboutwebdev.com/projectCountdown/home.html"><h2>Project Countdown</h2></a>
-            <p>I initially made this as a way to give myself a heads up as to how much time I have to buy gifts for friends and family before Christmas day. While I was researching countdown clocks online I noticed that a lot of them had quite a few dependencies.  My main goal for this project was to create a very lightweight, simple web app. One that was independent of external libraries in an effort to keep load times down mainly for mobile users.
+            <p>I initially made this as a way to give myself a heads up as to how much time I had to buy gifts for friends and family before Christmas day. While I was researching countdown clocks online I noticed that a lot of them had quite a few dependencies.  My main goal for this project was to create a very lightweight, simple web app. One that was independent of external libraries in an effort to keep load times down mainly for mobile users.
             I also want to make the project responsive on all devices. I achieved this by combining media queries with the flexbox module. To increase the immersion of the project I included the HTML5 Canvas. To render a snowfall in behind the countdown clock. I had a great time researching how to develop this project and hope you enjoy it as much as I do!</p>
 
             <!-- <p>Nullam quis tortor eget leo consectetur bibendum. Ut sapien lorem, vestibulum non ipsum nec, lacinia tincidunt orci. Aenean a tellus fringilla, vulputate eros quis, consectetur turpis. Morbi eu leo sit amet nisi congue gravida. Nullam vitae ultrices libero. Fusce rutrum, erat a ullamcorper efficitur, erat erat pellentesque purus, sit amet pellentesque mi leo eu dui. Nulla congue arcu eleifend erat euismod fringilla. Vivamus at iaculis sem. Quisque molestie dolor at risus interdum, sit amet pellentesque erat maximus. Sed quis venenatis nunc, eget suscipit velit. Nullam egestas sollicitudin enim, sagittis gravida enim rutrum vel. Fusce auctor metus augue, non auctor ante aliquet a. Aenean enim risus, malesuada in porta ac, auctor et mauris. Nam eu auctor est, quis sagittis risus. Integer finibus interdum libero eu rutrum.</p> -->
             </div>
             <!-- end of slide-wrapper -->
           </div>
-          <div class="slide crimerate" data-anchor="slide2"><div class="intro">slide 2</div></div>
+          <div class="slide crimerate" data-anchor="slide2">
+            <div class="slide-wrapper ">
+              <img class="crime-img" src="assets/howbadisit.png" alt="Picture of how bad is it web app">
+              <a href="http://mattaboutwebdev.com/crime_rate/google-mapsapi.html">
+                <h2>How <span class="red-text">bad</span> is it?</h2>
+              </a>
+              <p>
+                I created this project to inform users of the crime rates in the Maritimes. When a user clicks on a red outlined province then a pop up informs them of the crimes that have been committed in that province in the last year.
+                This project was created using The Google Maps API, Fusion Tables and open data from the Canadian Government.
+              </p>
+            </div>
+          </div>
       </section>
       <section class="section contact " id="section2">
 
